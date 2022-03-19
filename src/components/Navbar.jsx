@@ -24,18 +24,17 @@ const Navbar = () => {
         <NavbarInnerContainer>
             <LeftContainer>
                 <NavbarLinkContainer>
-                {isLoggedIn && <>
+                
                   <NavbarLink to="/products" element={<Products />}>Products</NavbarLink>
                     <NavbarLink to="/categories" element={<Categories />}>Categories</NavbarLink>
                     <NavbarLink to="/brands" element={<Brands />}>Brands</NavbarLink>
-                    </>
-                }
-                  {!isLoggedIn && 
-                  <>
+                
+                
+                
                     <NavbarLink to="/login">Login</NavbarLink>
                     <NavbarLink to="/register">Registrar</NavbarLink>
-                  </>
-                  }
+                
+                
                   <OpenLinksButton onClick={() => {
                     setExtendNavbar((current) => !current)
                   }} > {extendNavbar ? <>&#10005;</> : <>&#8801;</>}</OpenLinksButton>
