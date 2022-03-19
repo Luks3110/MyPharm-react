@@ -3,19 +3,19 @@ const url = 'http://' + process.env.REACT_APP_API_HEROKU
 
 
 const userInstance = axios.create({
-    baseURL: `${url}/usuarios/auth`,
+    baseURL: `${url}usuarios/auth`,
 });
 
 const productInstance = axios.create({
-    baseURL: `${url}/produtos`,
+    baseURL: `${url}produtos`,
 })
 
 const categoriesInstance = axios.create({
-    baseURL: `${url}/categorias`,
+    baseURL: `${url}categorias`,
 })
 
 const brandsInstance = axios.create({
-    baseURL: `${url}/marcas`,
+    baseURL: `${url}marcas`,
 })
 
 export const registerUser = ({ name, email, password, confirmPassword }) => {
