@@ -23,9 +23,7 @@ function App() {
         <Route
           path="*"
           element={ 
-          <main>
-            <h1>Não tem nada aqui</h1>
-          </main>
+            <Login />
           } />
       </Routes>
     </Router>

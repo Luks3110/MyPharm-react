@@ -1,6 +1,5 @@
 import axios from 'axios'
-const url = 'http://' + process.env.REACT_APP_API_URL
-const url_heroku = 'http://' + process.env.REACT_APP_API_URL_HEROKU
+const url = 'http://' + process.env.REACT_APP_API_HEROKU
 
 
 const userInstance = axios.create({

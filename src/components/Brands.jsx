@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getBrands, addBrand } from "../redux/actions/Brands.actions";
+import { getBrands } from "../redux/actions/Brands.actions";
 import AddModal from "./Modals/AddModal";
 import UpdateModal from './Modals/UpdateModal';
 import {
@@ -16,11 +16,9 @@ import { brandArray } from "../data/formData";
 const Brands = () => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
-  const [updateId, setUpdateId] = useState("")
   const [updateModal, setUpdateModal] = useState(false);
   const brands = useSelector((state) => state.brands.brands);
   const isLoading = useSelector((state) => state.isLoading);
-  console.log(updateModal)
   useEffect(() => {
     dispatch(getBrands());
   }, []);

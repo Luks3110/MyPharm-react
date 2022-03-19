@@ -20,7 +20,6 @@ import {
   import { registerUser, loginUser, logoutUser } from '../../utils/api';
   
   function* authenticate({ name, email, password, confirmPassword, isRegister }) {
-    
     try {
       let data;
       if (isRegister) {
